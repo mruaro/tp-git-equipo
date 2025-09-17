@@ -1,3 +1,1 @@
-<?php
-echo "Hola, este es mi archivo PHP inicial";
-?>
+<?php echo 'Primera versión en alfa'; ?>
