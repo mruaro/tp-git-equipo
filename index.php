@@ -1,1 +1,1 @@
-<?php echo 'Primera versión en alfa'; ?>
+<?php echo 'Segunda versión en alfa'; ?>
