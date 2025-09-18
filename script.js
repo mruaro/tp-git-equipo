@@ -39,32 +39,6 @@ $(document).ready(function() {
         });
     }
 
-    // Cargar las provincias al iniciar la página
-    fetchProvincias();
-
-    // Evento para el clic del botón de editar
-    $(document).on('click', '.task-edit', function(e) {
-        e.preventDefault();
-        
-        // Obtener el ID de la provincia de la fila de la tabla
-        const element = $(this).closest('tr');
-        const id = $(element).data('id');
-
-        // Establecer el estado de edición a `true`
-        edit = true;
-
-        // Petición AJAX para obtener los datos de la provincia
-        $.post('buscarprov.php', { id: id }, function(response) {
-            const provincia = JSON.parse(response);
-            
-            // Llenar el formulario con los datos obtenidos
-            $('#nombre').val(provincia.nombre);
-            $('#descripcion').val(provincia.descripcion);
-            $('#taskId').val(provincia.id); 
-
-            // Cambiar el texto del botón de "Guardar" a "Actualizar"
-            $('#task-form button[type="submit"]').text('Actualizar');
-        });
     });
 
     // Evento para el envío del formulario (crear o editar)
@@ -109,4 +83,3 @@ $(document).ready(function() {
             });
         }
     });
-});
