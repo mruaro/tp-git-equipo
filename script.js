@@ -67,17 +67,5 @@ $(document).ready(function() {
         });
     });
 
-    // Evento para el clic del botón de eliminar
-    $(document).on('click', '.task-delete', function(e) {
-        e.preventDefault();
-
-        if (confirm('¿Estás seguro de que quieres eliminar esta provincia?')) {
-            const element = $(this).closest('tr');
-            const id = $(element).data('id');
-            
-            $.post('borrarprov.php', { id: id }, function(response) {
-                console.log(response);
-                fetchProvincias();
-            });
-        }
-    });
+    
+    
