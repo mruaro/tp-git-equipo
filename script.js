@@ -1,5 +1,3 @@
-// Variable de estado para controlar si estamos en modo edición
-let edit = false;
 
 $(document).ready(function() {
     // Función para obtener y mostrar las provincias en la tabla
